@@ -3,10 +3,10 @@ import './App.css';
 import Navaigation from './shared/Navaigation';
 import { Routes, Route } from 'react-router-dom';
 import Calender from './components/Calender';
-import About from './components/About';
 import 'react-day-picker/dist/style.css';
 import Home from './components/Home';
 import Footer from './shared/Footer';
+import Todo from './components/Todo';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
-        <Route path='/about' element={<About></About>}></Route>
+        <Route path='/to-do' element={<Todo />}></Route>
       </Routes>
       <Footer></Footer>
     </div>
