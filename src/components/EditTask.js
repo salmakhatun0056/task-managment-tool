@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import fetcher from '../api';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
+
 
 const EditTask = () => {
     const { id } = useParams()
@@ -15,18 +16,18 @@ const EditTask = () => {
             setTasks(res.data)
         })()
     }, [])
-    console.log(tasks)
+    // console.log(tasks)
 
     const { register, handleSubmit, reset } = useForm()
+
     const onSubmit = async (data) => {
-        const res = await fetcher.put(`edit-task/${id}`, data)
-        console.log(res)
+        const res = await fetcher.put(`/edit-task/${id}`, data)
         reset()
-
+        console.log(res)
+        toast('You edit your daily task')
+        // refetch() 
     }
-    const editTask = async (data) => {
 
-    }
     return (
         <div className='bg-gray-900 h-5/6'>
             <div className='lg:w-1/2 mx-auto py-24 '>
@@ -39,9 +40,10 @@ const EditTask = () => {
                     </div>
 
                     <div class="flex items-center justify-center">
-                        <button class="bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-                            Submit Edit
-                        </button>
+
+                        <input type='submit' value='submit' class="bg-gray-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" />
+
+
                     </div>
                 </form>
             </div>

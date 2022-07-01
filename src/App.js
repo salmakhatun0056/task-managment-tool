@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Footer from './shared/Footer';
 import Todo from './components/Todo';
 import EditTask from './components/EditTask';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
         <Route path='/to-do' element={<Todo />}></Route>
       </Routes>
       {/* <Footer></Footer> */}
+      <ToastContainer />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import fetcher from '../api';
+import { toast } from 'react-toastify';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
         const res = await fetcher.post("add-task", data)
         reset()
         console.log(res)
+        toast('You added your daily task')
     }
 
     const navigate = useNavigate()
