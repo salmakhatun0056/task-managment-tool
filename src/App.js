@@ -7,6 +7,7 @@ import 'react-day-picker/dist/style.css';
 import Home from './components/Home';
 import Footer from './shared/Footer';
 import Todo from './components/Todo';
+import EditTask from './components/EditTask';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/calender' element={<Calender></Calender>}></Route>
+        <Route path='/task/:id' element={<EditTask />}></Route>
         <Route path='/to-do' element={<Todo />}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </div>
   );
 }
