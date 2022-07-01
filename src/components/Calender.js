@@ -12,7 +12,7 @@ const Calender = () => {
         head: 'custom-head'
     };
     return (
-        <div className='text-center'>
+        <div className='text-center my-12'>
             <h1 className='text-2xl font-bold mt-5'>This is Calender</h1>
             <div className='flex items-center justify-center mt-5 '>
                 <style>{`.custom-head { color: red }`}</style>
