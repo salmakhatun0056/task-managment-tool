@@ -11,19 +11,23 @@ const Calender = () => {
         ...styles,
         head: 'custom-head'
     };
+
     return (
-        <div className='text-center my-12'>
-            <h1 className='text-2xl font-bold mt-5'>This is Calender</h1>
-            <div className='flex items-center justify-center mt-5 '>
-                <style>{`.custom-head { color: red }`}</style>
-                <DayPicker
-                    classNames={classNames}
-                    mode="single"
-                    selected={date}
-                    onSelect={setDate}
-                />
+        <div className='text-center  bg-gray-900'>
+            <div >
+                <h1 className='text-2xl font-bold pt-6 text-white'>THIS IS CALENDER</h1>
+                <div className='flex items-center justify-center mt-5 '>
+                    <style>{`.custom-head { color: red }`}</style>
+                    <DayPicker
+                        className='text-white'
+                        classNames={classNames}
+                        mode="single"
+                        selected={date}
+                        onSelect={setDate}
+                    />
+                </div>
+                <p className='text-white py-6'>You have selected: {format(date, "PP")}</p>
             </div>
-            <p>You have selected: {format(date, "PP")}</p>
         </div>
     );
 };

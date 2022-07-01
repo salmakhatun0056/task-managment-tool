@@ -22,13 +22,13 @@ const Todo = () => {
     // const [editTask, setEditTask] = useState(null)
 
     return (
-        <div>
-            <h2 className='text-primary text-2xl font-bold text-center'>All User Daily Task</h2>
+        <div className=' bg-gray-900'>
+            <h2 className='text-primary pt-6  text-white text-2xl font-bold text-center'>ALL USERS DAILY TASKS</h2>
 
 
             <div className='flex justify-center items-center'>
-                <div class="relative lg:w-1/2 overflow-x-auto shadow-md  sm:rounded-lg  my-8">
-                    <table class="lg:w-full  text-sm text-left text-gray-500 dark:text-gray-400">
+                <div class="relative w-fit overflow-x-auto shadow-md  sm:rounded-lg  my-8">
+                    <table class="lg:w-full  text-sm text-left text-white dark:text-gray-400">
                         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                             <tr className='text-center'>
 
@@ -53,7 +53,7 @@ const Todo = () => {
                                     <tr className='text-center' key={index}>
                                         <th >{index + 1}</th>
                                         <td>{task._id}</td>
-                                        <td>{task.task}</td>
+                                        <td className='px-6'>{task.task}</td>
                                         <td><button onClick={() => handelEditButton(task._id)} className='btn '><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                         </svg></button></td>
