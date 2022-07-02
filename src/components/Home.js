@@ -38,7 +38,7 @@ const Home = () => {
 
 
     return (
-        <div className=' bg-gray-900 h-screen'>
+        <div className=' bg-gray-900 '>
             <div className='text-center   text-2xl '>
                 <h1 className='text-2xl py-6 font-bold text-white'>WRITE YOUR DAILY TASK</h1>
                 <div className='lg:w-1/2 mx-auto'>
