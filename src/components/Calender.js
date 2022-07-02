@@ -13,7 +13,7 @@ const Calender = () => {
     };
 
     return (
-        <div className='text-center  bg-gray-900'>
+        <div className='text-center  bg-gray-900 h-screen'>
             <div >
                 <h1 className='text-2xl font-bold pt-6 text-white'>THIS IS CALENDER</h1>
                 <div className='flex items-center justify-center mt-5 '>

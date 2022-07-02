@@ -7,7 +7,6 @@ import { toast } from 'react-toastify';
 
 const EditTask = () => {
     const { id } = useParams()
-
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {

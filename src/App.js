@@ -21,7 +21,7 @@ function App() {
         <Route path='/task/:id' element={<EditTask />}></Route>
         <Route path='/to-do' element={<Todo />}></Route>
       </Routes>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
       <ToastContainer />
     </div>
   );

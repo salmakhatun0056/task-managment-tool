@@ -23,10 +23,9 @@ const Todo = () => {
         setComplete(true)
     }
 
-    // const [editTask, setEditTask] = useState(null)
 
     return (
-        <div className=' bg-gray-900'>
+        <div className=' bg-gray-900 h-screen'>
             <h2 className='text-primary pt-6  text-white text-2xl font-bold text-center'>ALL USERS DAILY TASKS</h2>
 
 
@@ -58,8 +57,8 @@ const Todo = () => {
                                         <th ><button class="form-check" onClick={() => handleCheckBox(complete)}><input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-black checked:bg-blue-600 checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" /></button></th>
                                         <td>{task._id}</td>
                                         <td className='px-6'>{task.task}</td>
-                                        <td><button onClick={() => handelEditButton(task._id)} className='btn '><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                        <td><button onClick={() => handelEditButton(task._id)} className='btn '><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                                         </svg></button></td>
 
                                     </tr>
