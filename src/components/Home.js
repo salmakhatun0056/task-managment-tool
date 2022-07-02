@@ -31,6 +31,11 @@ const Home = () => {
         navigate(`/task/${id}`)
     }
 
+    const [complete, setComplete] = useState(false)
+    const handleCheckBox = () => {
+        setComplete(true)
+    }
+
 
     return (
         <div className=' bg-gray-900 h-screen'>
@@ -57,7 +62,7 @@ const Home = () => {
                                     <tr className='text-center'>
 
                                         <th scope="col" class="px-6 py-3">
-                                            S/L
+                                            Complete Task
                                         </th>
                                         <th scope="col" class="px-6 py-3">
                                             User id
@@ -75,7 +80,7 @@ const Home = () => {
                                     {
                                         tasks?.map((task, index) =>
                                             <tr className='text-center' key={index}>
-                                                <th >{index + 1}</th>
+                                                <th ><button class="form-check" onClick={() => handleCheckBox(complete)}><input class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-black checked:bg-blue-600 checked:border-white focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="checkbox" value="" id="flexCheckDefault" /></button></th>
                                                 <td>{task._id}</td>
                                                 <td className=' px-6'>{task.task}</td>
                                                 <td><button onClick={() => handelEditButton(task._id)} className='btn '><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
