@@ -28,7 +28,7 @@ const EditTask = () => {
     }
 
     return (
-        <div className='bg-gray-900 h-5/6'>
+        <div className='bg-gray-900 h-screen'>
             <div className='lg:w-1/2 mx-auto py-24 '>
                 <form onSubmit={handleSubmit(onSubmit)} class="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <div class="mb-4">
