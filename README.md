@@ -1,2 +1,2 @@
 # Task managment
-[Natlify Website](https://timely-otter-a52c63.netlify.app/)
+[Natlify Website](https://task-managment-2d695.web.app/)
